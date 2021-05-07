@@ -1,12 +1,12 @@
-FROM webcenter/openjdk-jre:8
-MAINTAINER Sebastien LANGOUREAUX <linuxworkgroup@hotmail.com>
+FROM ubuntu:bionic
+LABEL maintainer="Fábio Silva <fabio.fernando.osilva@gmail.com>"
 
 ENV ACTIVEMQ_CONFIG_DIR /opt/activemq/conf.tmp
 ENV ACTIVEMQ_DATA_DIR /data/activemq
 
 # Update distro and install some packages
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y python-testtools python-nose python-pip vim curl supervisor logrotate locales  && \
+    apt-get install --no-install-recommends -y openjdk-8-jre python-testtools python-nose python-pip python-setuptools vim curl supervisor logrotate locales  && \
     update-locale LANG=C.UTF-8 LC_MESSAGES=POSIX && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \

@@ -98,7 +98,7 @@ In your issue report please make sure you provide the following information:
 Pull the image from the docker index. This is the recommended method of installation as it is easier to update image. These builds are performed by the **Docker Trusted Build** service.
 
 ```bash
-docker pull webcenter/activemq:5.14.3
+docker pull webcenter/activemq:5.15.14
 ```
 
 You can also pull the `latest` tag which is built from the repository *HEAD*
