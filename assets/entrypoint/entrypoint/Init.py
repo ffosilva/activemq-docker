@@ -174,7 +174,7 @@ class Init():
 
         # Look for enabled scheduler
         if enabledScheduler == "true" :
-            self.replace_all(ACTIVEMQ_CONF + "/activemq.xml", '<broker ', '<broker schedulerSupport="true"')
+            self.replace_all(ACTIVEMQ_CONF + "/activemq.xml", '<broker ', '<broker schedulerSupport="true" ')
 
         # We inject the setting to manage right on topic and queue if needed
         if enabledAuth == "true":
