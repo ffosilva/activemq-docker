@@ -1,6 +1,6 @@
 services:
   activemq:
-    image: ffosilva/activemq:latest
+    image: ffosilva/activemq:5.15.14
     container_name: activemq
     ports:
       - 61616:61616
